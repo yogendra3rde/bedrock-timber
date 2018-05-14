@@ -1,0 +1,14 @@
+@import 'fonts';
+@import 'bootstrap';
+@import 'variables';
+@import 'loops';
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $green;
+    font-family: 'Exo 2';
+}

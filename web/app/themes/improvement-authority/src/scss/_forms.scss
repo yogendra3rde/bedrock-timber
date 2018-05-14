@@ -1,0 +1,198 @@
+form {
+    &:not(.tellus-form) {
+        input, mat-select {
+            box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .15);
+        }
+    }
+
+    input, label {
+        font-family: 'Exo 2' !important;
+        color: #222 !important;
+    }
+
+    .mat-form-field-subscript-wrapper {
+        margin-top: 0 !important;
+    }
+
+    mat-form-field {
+        @media (max-width: 768px) {
+            width: 90%;
+        }
+    }
+
+    .mat-form-field-invalid {
+        label {
+            color: red !important;
+        }
+    }
+
+    .mat-input-underline {
+        display: none !important;
+    }
+
+    .dot-right {
+        .mat-input-infix {
+            width: 140px !important;
+
+            @media (min-width: 768px) {
+                padding-right: 50px;
+                background-image: linear-gradient(to bottom, #969696 22%, rgba(255, 255, 255, 0) 0%);
+                background-position: right;
+                background-repeat: repeat-y;
+                background-size: 2px 7px;
+            }
+        }
+    }
+
+    button {
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+
+        .mat-button-focus-overlay {
+            transition: opacity 0.2s ease-in-out !important;
+        }
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    mat-error {
+        &.absolute {
+            position: absolute;
+        }
+    }
+
+    input, mat-select {
+        border: 1px solid #222 !important;
+        padding-left: 15px !important;
+        font-size: 13px !important;
+        border-radius: 3px;
+        height: 45px;
+    }
+
+    mat-select {
+        line-height: 3.4;
+
+        .mat-select-trigger {
+            display: block !important;
+        }
+
+        .mat-select-arrow {
+            margin-right: 16px;
+            border: none;
+            border-right: 3px solid #4e4e4e;
+            border-bottom: 3px solid #4e4e4e;
+            border-radius: 0 0 4px 0;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg);
+            transition: transform 0.3s ease-in-out;
+        }
+    }
+    
+    .mat-form-field-type-mat-select, .mat-form-field-infix {
+        line-height: 0.9 !important; // mat-select 1px top position fix  <Material Bug>
+    }
+
+    mat-radio-button {
+        margin-right: 15px;
+
+        .mat-radio-outer-circle {
+            border-color: #363636 !important;
+        }
+
+        .mat-radio-inner-circle {
+            background-color: #666 !important;
+        }
+    }
+
+    mat-checkbox {
+        position: relative;
+        margin-right: 35px;
+
+        .mat-checkbox-label {
+            padding-left: 5px;
+            width: 35px;
+            user-select: none;
+        }
+
+        .mat-checkbox-frame {
+            border: 2px solid #222 !important;
+            border-radius: 5px !important;
+        }
+
+        .mat-checkbox-background {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            &:after {
+                content: ' ';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                border-radius: 3px;
+                transform: translate(-50%, -50%) scale(0);
+                width: 66%;
+                height: 66%;
+                background: #666;
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+
+        &.mat-checkbox-checked .mat-checkbox-background {
+            &:after {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+
+    .full-width {
+        width: calc(100% - 15px);
+    }
+
+    .size-2 {
+        text-align: justify;
+
+        &> mat-form-field {
+            width: 46%;
+
+            &:first-child {
+                margin-right: 5%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            &> mat-form-field {
+                width: calc(100% - 15px);
+    
+                &:first-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .size-3 {
+        text-align: justify;
+
+        &> mat-form-field {
+            width: 28.8%;
+
+            &:not(:last-child) {
+                margin-right: 5%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            &> mat-form-field {
+                width: calc(100% - 15px);
+    
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
